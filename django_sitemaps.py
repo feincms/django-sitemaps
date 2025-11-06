@@ -106,7 +106,7 @@ def robots_txt(*, timeout=0, sitemaps=("/sitemap.xml",)):
     def view(request):
         lines = ["User-agent: *\n"]
         lines.extend(
-            "Sitemap: %s\n" % request.build_absolute_uri(str(sitemap))
+            f"Sitemap: {request.build_absolute_uri(str(sitemap))}\n"
             for sitemap in sitemaps
         )
         return HttpResponse("".join(lines), content_type="text/plain")
