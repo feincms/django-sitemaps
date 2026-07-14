@@ -37,14 +37,13 @@ dependencies = [
 ]
 urls.Homepage = "https://github.com/matthiask/django-sitemaps/"
 
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
   "django_sitemaps.py",
 ]
 
 [tool.ruff]
 target-version = "py38"
-
 fix = true
 show-fixes = true
 lint.extend-select = [

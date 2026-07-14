@@ -14,7 +14,7 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.29.1
+    rev: 1.31.1
     hooks:
       - id: django-upgrade
         args: [--target-version, "3.2"]
@@ -22,16 +22,16 @@ repos:
     rev: v0.3.1
     hooks:
       - id: absolufy-imports
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.14.3
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.21
     hooks:
       - id: ruff-check
       - id: ruff-format
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: v2.11.1
+    rev: v2.25.3
     hooks:
       - id: pyproject-fmt
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.24.1
+    rev: v0.25
     hooks:
       - id: validate-pyproject
