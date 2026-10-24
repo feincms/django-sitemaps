@@ -1,15 +1,26 @@
-==========
 Change log
 ==========
 
-`Next version`_
-~~~~~~~~~~~~~~~
+Next version
+~~~~~~~~~~~~
+
+- Updated the README: ``path()`` in URLconf examples, the current
+  ``add_django_sitemap`` signature and a comparison with
+  ``django.contrib.sitemaps``.
+
+
+`2.0.2`_ (2025-11-06)
+~~~~~~~~~~~~~~~~~~~~~
+
+.. _2.0.2: https://github.com/matthiask/django-sitemaps/compare/2.0.1...2.0.2
 
 - Converted the package to hatchling and ruff.
 
 
 `2.0.1`_ (2022-01-25)
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. _2.0.1: https://github.com/matthiask/django-sitemaps/compare/1.1...2.0.1
 
 - Fixed cases where empty priority tags were added if priority was an
   empty string (which is always the default case with Django sitemaps).
@@ -21,6 +32,8 @@ Change log
 `1.1`_ (2018-04-11)
 ~~~~~~~~~~~~~~~~~~~
 
+.. _1.1: https://github.com/matthiask/django-sitemaps/compare/1.0...1.1
+
 - Added the ``lxml`` dependency to ``install_requires``.
 - Added documentation.
 - Added the ``robots_txt`` view for easily adding a ``/robots.txt``
@@ -30,9 +43,6 @@ Change log
 `1.0`_ (2017-03-29)
 ~~~~~~~~~~~~~~~~~~~
 
-- Initial release!
-
 .. _1.0: https://github.com/matthiask/django-sitemaps/commit/df0841349
-.. _1.1: https://github.com/matthiask/django-sitemaps/compare/1.0...1.1
-.. _2.0.1: https://github.com/matthiask/django-sitemaps/compare/1.1...2.0.1
-.. _Next version: https://github.com/matthiask/django-sitemaps/compare/2.0.1...main
+
+- Initial release!
