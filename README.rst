@@ -77,6 +77,11 @@ View::
             pretty_print=settings.DEBUG,
         )
 
+Some browsers display the sitemap as plain text because the
+``xhtml:link`` alternates use a different namespace and no stylesheet
+is attached. The response is still valid XML served as
+``application/xml``; search engines don't mind.
+
 URLconf::
 
     from django.urls import path
