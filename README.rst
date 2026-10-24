@@ -6,6 +6,19 @@ django-sitemaps
 uses Python 3's keyword-only arguments for self-documenting code.
 
 
+Why not ``django.contrib.sitemaps``?
+====================================
+
+Django's sitemaps framework didn't support alternates when this package
+was written. Django 3.2 added ``i18n``, ``languages`` and ``alternates``,
+but alternate URLs are still derived by activating each language and
+reversing the same object's URL. django-sitemaps instead lets you pass
+arbitrary alternate URLs for each entry, e.g. when languages live on
+different domains. URLs are added one-by-one from a regular view, without
+having to write ``Sitemap`` classes. Existing Django sitemaps can still be
+included using ``add_django_sitemap``.
+
+
 Installation
 ============
 
