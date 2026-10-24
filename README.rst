@@ -55,18 +55,10 @@ View::
                 },
             )
 
-        # Adding conventional Django sitemaps is supported. The
-        # request argument is necessary because Django's sitemaps
-        # depend on django.contrib.sites, resp. RequestSite.
-        sitemap.add_django_sitemap(PagesSitemap, request=request)
-
-        # You can also specify the site and protocol manually should you wish
-        # to do so:
-        sitemap.add_django_sitemap(
-            PagesSitemap, site=...site..., protocol=request.scheme
-        )
-        # Note! If you're omitting the request you *have* to specify site and
-        # protocol yourself.
+        # Adding conventional Django sitemaps is supported. Pass either
+        # the class or an instance. Their URLs are also passed through
+        # build_absolute_uri, so django.contrib.sites isn't required.
+        sitemap.add_django_sitemap(PagesSitemap)
 
         # You could get the serialized XML...
         # ... = sitemap.serialize([pretty_print=False])
