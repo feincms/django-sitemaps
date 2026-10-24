@@ -9,6 +9,7 @@ Next version
   ``django.contrib.sitemaps``.
 - Added tests and a GitHub Actions workflow running them.
 - Added a workflow publishing releases to PyPI using trusted publishing.
+- Added the missing package description.
 
 
 `2.0.2`_ (2025-11-06)
