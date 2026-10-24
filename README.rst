@@ -66,12 +66,13 @@ View::
 
 URLconf::
 
+    from django.urls import path
     from django_sitemaps import robots_txt
     from app.views import sitemap
 
     urlpatterns = [
-        url(r'^sitemap\.xml$', sitemap),
-        url(r'^robots\.txt$', robots_txt(timeout=86400)),
+        path('sitemap.xml', sitemap),
+        path('robots.txt', robots_txt(timeout=86400)),
         ...
     ]
 
@@ -87,7 +88,7 @@ The list of sitemap URLs may be overridden by setting ``sitemaps``::
     from django.urls import reverse_lazy
 
     urlpatterns = [
-        url(r'^robots\.txt$', robots_txt(
+        path('robots.txt', robots_txt(
             timeout=86400,
             sitemaps=[
                 '/sitemap.xml',
