@@ -102,3 +102,8 @@ lint.per-file-ignores."*/migrat*/*" = [
 lint.isort.combine-as-imports = true
 lint.isort.lines-after-imports = 2
 lint.mccabe.max-complexity = 15
+
+[tool.pytest]
+ini_options.python_files = [ "test_*.py", "tests.py" ]
+ini_options.xfail_strict = true
+ini_options.DJANGO_SETTINGS_MODULE = "testapp.settings"
