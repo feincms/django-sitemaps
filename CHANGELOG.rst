@@ -4,6 +4,9 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+2.1 (2026-10-24)
+~~~~~~~~~~~~~~~~
+
 - Updated the README: ``path()`` in URLconf examples, the current
   ``add_django_sitemap`` signature and a comparison with
   ``django.contrib.sitemaps``.
