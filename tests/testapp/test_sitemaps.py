@@ -83,9 +83,7 @@ def test_add_django_sitemap():
         "http://testserver/one/",
         "http://testserver/two/",
     ] * 2
-    assert {url.findtext("s:changefreq", namespaces=NS) for url in root} == {
-        "daily"
-    }
+    assert {url.findtext("s:changefreq", namespaces=NS) for url in root} == {"daily"}
     assert root.find("s:url/s:priority", NS) is None
 
 
