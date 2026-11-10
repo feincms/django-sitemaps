@@ -71,13 +71,8 @@ class Sitemap:
             sitemap = sitemap()
 
         for url in sitemap.get_urls(site=SimpleNamespace(domain="_"), protocol="_"):
-            # Replace this with url["location"].removeprefix("_://_") when
-            # supporting only Python 3.9 or better.
-            loc = url["location"]
-            if loc.startswith("_://_"):
-                loc = loc[5:]
             self.add(
-                loc,
+                url["location"].removeprefix("_://_"),
                 changefreq=url.get("changefreq"),
                 lastmod=url.get("lastmod"),
                 priority=url.get("priority"),
